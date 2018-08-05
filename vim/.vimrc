@@ -17,7 +17,7 @@ set ignorecase
 set tags=./tags;,tags;
 set laststatus=2
 set colorcolumn=85
-highlight ColorColumn ctermbg=DarkBlue
+highlight ColorColumn ctermbg=DarkGray
 
 " vim-plug settings
 call plug#begin('~/.vim/plugged')
