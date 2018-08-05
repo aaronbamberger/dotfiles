@@ -9,6 +9,7 @@
 :endif
 
 " Put your own customizations below
+set t_Co=256
 set mouse=a
 color desert
 set number
@@ -21,7 +22,12 @@ highlight ColorColumn ctermbg=DarkBlue
 " vim-plug settings
 call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 " YouCompleteMe settings
 set completeopt-=preview
+
+" vim-airline settings
+let g:airline_powerline_fonts = 1
