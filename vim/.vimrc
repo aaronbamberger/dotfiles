@@ -3,15 +3,12 @@
    source /etc/vimrc
 :endif
 
-" Include Arista-specific settings
-:if filereadable( $VIM . "/vimfiles/arista.vim" )
-   source $VIM/vimfiles/arista.vim
-:endif
-
 " Put your own customizations below
 set t_Co=256
 set mouse=a
 color desert
+set tabstop=4
+set smartindent
 set number
 set ignorecase
 set tags=./tags;,tags;
@@ -24,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " YouCompleteMe settings
@@ -31,3 +29,16 @@ set completeopt-=preview
 
 " vim-airline settings
 let g:airline_powerline_fonts = 1
+
+" NERDTree settings
+let NERDTreeShowHidden=1
+let g:NERDTreeDirArrows=1
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+nmap <c-n> :NERDTreeToggle<CR>
+
+" Include Arista-specific settings
+:if filereadable( $VIM . "/vimfiles/arista.vim" )
+   source $VIM/vimfiles/arista.vim
+:endif
+
