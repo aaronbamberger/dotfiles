@@ -16,6 +16,7 @@ set laststatus=2
 set colorcolumn=85
 set listchars=eol:¬,tab:»·,trail:·,extends:→,precedes:←,space:␣,nbsp:␣
 highlight ColorColumn ctermbg=DarkGray
+filetype plugin indent on
 
 " vim-plug settings
 call plug#begin('~/.vim/plugged')
@@ -28,6 +29,8 @@ call plug#end()
 
 " YouCompleteMe settings
 set completeopt-=preview
+let g:ycm_clangd_binary_path = "~/llvm-8.0.1.src/build/bin/clangd"
+let g:ycm_server_python_interpreter = "/usr/bin/python"
 
 " vim-airline settings
 let g:airline_powerline_fonts = 1

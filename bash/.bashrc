@@ -15,6 +15,7 @@ export LESS=-R
 export TZ=America/Chicago
 alias grep="grep --color=always"
 alias tmux="tmux -2"
+alias pb="curl -F c=@- pb"
 
 function arista_ctags() {
    ctags -R --Python-kinds="+cfmv-i" --langmap="Python:+(__init__)" --langmap="c++:+.tin" --langmap="c++:+.itin" --langdef=tacc --langmap="tacc:.tac" --regex-tacc="/^[ \t]*([A-Za-z0-9_]+)[ \t]*:/\1/d,definition/" --regex-tacc="/^[ \t]*([A-Za-z0-9_]+)[ \t]*;/\1/e,enumerators/" --regex-tacc="/^[ \t]*([A-Za-z0-9_]+)[ \t]*;/\1_/e,enumerators/" --extra="+fq" --fields="+im"
