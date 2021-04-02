@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'simnalamburt/vim-mundo'
+Plug 'fidian/hexmode'
 call plug#end()
 
 " YouCompleteMe settings
